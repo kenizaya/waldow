@@ -1,5 +1,5 @@
 .dropdown {
-  background-color: red;
+  background-color: #a32222;
   height: 40px;
   width: 40px;
   display: inline-flex;
@@ -10,4 +10,8 @@
   color: white;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+.dropdown:hover {
+  background-color: #c52323;
 }

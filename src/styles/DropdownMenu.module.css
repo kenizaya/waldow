@@ -1,4 +1,10 @@
 .dropdown-menu {
+  position: absolute;
+  top: 7.5%;
+  left: 67%;
+  background-color: blueviolet;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .item {
@@ -6,6 +12,7 @@
   align-items: center;
   gap: 30px;
   transition: transform 200ms;
+  color: aliceblue;
 }
 
 .item:hover {
