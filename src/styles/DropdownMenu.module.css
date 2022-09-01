@@ -1,0 +1,26 @@
+.dropdown-menu {
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition: transform 200ms;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.info {
+  font-size: 1.1rem;
+}
+
+.dif {
+  font-size: 1rem;
+  text-align: right;
+}
+
+.img {
+  height: 100px;
+}
