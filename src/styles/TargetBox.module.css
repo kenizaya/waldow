@@ -1,0 +1,25 @@
+.cursor {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  background-color: aliceblue;
+  left: 60px;
+  border-radius: 4px;
+}
+
+.list {
+  list-style: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.list-item {
+  padding-bottom: 12px;
+  transition: transform 250ms;
+}
+
+.list-item:hover {
+  transform: scale(1.1);
+}
