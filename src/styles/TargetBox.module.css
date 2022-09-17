@@ -1,5 +1,6 @@
-.cursor {
-  position: relative;
+.root {
+  display: inline-block;
+  position: absolute;
 }
 
 .container {
