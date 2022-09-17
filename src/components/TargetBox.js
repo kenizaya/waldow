@@ -10,7 +10,11 @@ const TargetBox = React.forwardRef(({ xPos, yPos }, ref) => {
     <>
       <div
         className={styles.root}
-        style={{ backgroundColor: 'red', top: `${yPos}px`, left: `${xPos}px` }}
+        style={{
+          backgroundColor: 'red',
+          top: `calc(${yPos}px - 3rem)`,
+          left: `calc(${xPos}px - 3rem)`,
+        }}
       >
         <img className={styles.cursor} src={bigCursor} alt='big cursor' />
         <div className={styles.container}>
