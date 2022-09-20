@@ -3,7 +3,11 @@
 }
 
 .img {
-  /* position: relative; */
   width: 100%;
-  cursor: url(../assets/custom-cursor.svg), auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    cursor: url(../assets/custom-cursor.svg), auto;
+  }
 }

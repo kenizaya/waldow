@@ -9,6 +9,20 @@ import { useEffect } from 'react'
 function MainImage() {
   const [showTargetBox, setShowTargetBox] = useState(false)
   const [menuLoc, setMenuLoc] = useState({ top: 0, left: 0 })
+  const characterLoc = {
+    bowser: {
+      x: 82,
+      y: 40.5,
+    },
+    yubaba: {
+      x: 50.39,
+      y: 5.42,
+    },
+    theKnight: {
+      x: 57.95,
+      y: 91.67,
+    },
+  }
   const imageRef = useRef()
 
   const handleClick = (event) => {
@@ -17,6 +31,8 @@ function MainImage() {
       left: (event.pageX / imageRef.current.offsetWidth) * 100,
     })
     setShowTargetBox(!showTargetBox)
+
+    console.log(menuLoc)
   }
 
   const handleMenuClick = () => {
