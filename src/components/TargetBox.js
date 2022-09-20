@@ -5,15 +5,15 @@ import bigCursor from '../assets/custom-cursor.svg'
 import styles from '../styles/TargetBox.module.css'
 import { useState } from 'react'
 
-const TargetBox = React.forwardRef(({ xPos, yPos }, ref) => {
+const TargetBox = ({ xPos, yPos }) => {
   return (
     <>
       <div
         className={styles.root}
         style={{
           backgroundColor: 'red',
-          top: `calc(${yPos}px - 3rem)`,
-          left: `calc(${xPos}px - 3rem)`,
+          top: `calc(${yPos}% - 0.376%)`,
+          left: `calc(${xPos}% - 1.54%)`,
         }}
       >
         <img className={styles.cursor} src={bigCursor} alt='big cursor' />
@@ -27,6 +27,6 @@ const TargetBox = React.forwardRef(({ xPos, yPos }, ref) => {
       </div>
     </>
   )
-})
+}
 
 export default TargetBox
