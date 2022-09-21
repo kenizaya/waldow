@@ -6,6 +6,7 @@ import styles from '../styles/MainImage.module.css'
 import { useRef } from 'react'
 import { useEffect } from 'react'
 import Snackbar from './Snackbar'
+import { characters } from '../data/data'
 
 function MainImage() {
   const [showTargetBox, setShowTargetBox] = useState(false)
@@ -16,24 +17,6 @@ function MainImage() {
     show: false,
   })
   const [isGameFinished, setIsGameFinished] = useState(false)
-  const characterLoc = {
-    Bowser: {
-      x: 82,
-      y: 40.5,
-      hasFound: false,
-    },
-
-    Yubaba: {
-      x: 50.39,
-      y: 5.42,
-      hasFound: false,
-    },
-    'The Knight': {
-      x: 57.95,
-      y: 91.67,
-      hasFound: false,
-    },
-  }
 
   const imageRef = useRef()
 
@@ -46,24 +29,30 @@ function MainImage() {
   }
 
   const isClickValid = (x, y, charX, charY) => {
+    console.log(charX, charY)
     return x > charX - 2 && x < charX + 2 && y > charY - 2 && y < charY + 2
   }
 
   const handleMenuClick = (xPos, yPos, name) => {
-    if (isClickValid(xPos, yPos, characterLoc[name].x, characterLoc[name].y)) {
-      setSnackbar({
-        text: `Congrats! You found ${name}!`,
-        bgColor: 'green',
-        show: true,
-      })
-      characterLoc[name].hasFound = true
-    } else {
-      setSnackbar({
-        text: `You chose wrong. Keep Looking!`,
-        bgColor: 'red',
-        show: true,
-      })
-    }
+    characters.forEach((character) => {
+      if (character.name === name) {
+        console.log('first')
+        if (isClickValid(xPos, yPos, character.x, character.y)) {
+          setSnackbar({
+            text: `Congrats! You found ${name}!`,
+            bgColor: 'green',
+            show: true,
+          })
+          character.found = true
+        } else {
+          setSnackbar({
+            text: `You chose wrong. Keep Looking!`,
+            bgColor: 'red',
+            show: true,
+          })
+        }
+      }
+    })
 
     setTimeout(
       () =>
