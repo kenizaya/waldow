@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuid } from 'uuid'
 import styles from '../styles/TargetBox.module.css'
 
 const TargetBox = ({ xPos, yPos, handleMenuClick, characters }) => {
@@ -16,7 +17,11 @@ const TargetBox = ({ xPos, yPos, handleMenuClick, characters }) => {
     >
       <ul className={styles.list}>
         {characters.map((character) => (
-          <li className={styles['list-item']} onClick={handleCLick}>
+          <li
+            className={styles['list-item']}
+            onClick={handleCLick}
+            key={uuid()}
+          >
             {character.name}
           </li>
         ))}

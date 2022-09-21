@@ -21,7 +21,6 @@ function GameImage({ characters, setCharacters, image }) {
       x: (event.pageX / imageRef.current.offsetWidth) * 100,
       y: (event.pageY / imageRef.current.offsetHeight) * 100,
     })
-    console.log(menuLoc)
     setShowTargetBox(!showTargetBox)
   }
 
