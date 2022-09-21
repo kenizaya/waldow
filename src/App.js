@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import GameImage from './components/GameImage'
 import HighScoreModal from './components/HighScoreModal'
-import { locCharacters, uniCharacters } from './data/data'
-import theLocNar from './assets/theLocNar.jpg'
-import universe113 from './assets/universe-113.jpg'
 
 function App() {
   const [isGameFinished, setIsGameFinished] = useState(false)
-  const [characterList, setCharacterList] = useState(locCharacters)
+  const location = useLocation()
+  const [characterList, setCharacterList] = useState(location.state.data)
 
   useEffect(() => {
     setIsGameFinished(
@@ -24,7 +23,7 @@ function App() {
         characters={characterList}
         setIsGameFinished={setIsGameFinished}
         setCharacters={setCharacterList}
-        image={theLocNar}
+        image={location.state.board}
       />
     </div>
   )
