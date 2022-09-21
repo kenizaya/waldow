@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import GameImage from './components/GameImage'
 import HighScoreModal from './components/HighScoreModal'
-import { characters } from './data/data'
+import { locCharacters, uniCharacters } from './data/data'
+import theLocNar from './assets/theLocNar.jpg'
+import universe113 from './assets/universe-113.jpg'
 
 function App() {
   const [isGameFinished, setIsGameFinished] = useState(false)
-  const [characterList, setCharacterList] = useState(characters)
+  const [characterList, setCharacterList] = useState(locCharacters)
 
   useEffect(() => {
     setIsGameFinished(
@@ -22,6 +24,7 @@ function App() {
         characters={characterList}
         setIsGameFinished={setIsGameFinished}
         setCharacters={setCharacterList}
+        image={theLocNar}
       />
     </div>
   )

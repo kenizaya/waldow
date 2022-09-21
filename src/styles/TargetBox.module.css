@@ -12,6 +12,7 @@
 .list {
   position: absolute;
   background-color: aliceblue;
+  width: 5rem;
   border-radius: 0.4rem;
   list-style: none;
   padding: 0;
@@ -37,7 +38,7 @@
   }
   .list {
     height: auto;
-    width: 6rem;
+    width: 6.6rem;
     transform: translate(72%, 48%);
   }
 }

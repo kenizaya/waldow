@@ -4,7 +4,7 @@ import styles from '../styles/Timer.module.css'
 function Timer({ isGameFinished }) {
   const [timer, setTimer] = useState(0)
 
-  const format = (interval) => {
+  const formatDuration = (interval) => {
     const seconds = `0${Math.round(interval % 60)}`.slice(-2)
     const minutes = `0${Math.floor(interval / 60) % 60}`.slice(-2)
     const hours = `0${Math.round(interval / 3600)}`.slice(-2)
@@ -18,8 +18,8 @@ function Timer({ isGameFinished }) {
       interval = setInterval(() => setTimer((prevTimer) => prevTimer + 1), 1000)
     } else {
       return () => {
-        clearInterval(interval)
         setTimer(0)
+        clearInterval(interval)
       }
     }
 
@@ -28,7 +28,7 @@ function Timer({ isGameFinished }) {
     }
   }, [isGameFinished])
 
-  return <span>{format(timer)}</span>
+  return <span>{formatDuration(timer)}</span>
 }
 
 export default Timer

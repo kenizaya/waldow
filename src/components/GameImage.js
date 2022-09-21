@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import TargetBox from './TargetBox'
-import image from '../assets/theLocNar.jpg'
 import Credit from './Credit'
 import styles from '../styles/GameImage.module.css'
 import { useRef } from 'react'
 import Snackbar from './Snackbar'
 
-function GameImage({ characters, setCharacters }) {
+function GameImage({ characters, setCharacters, image }) {
   const [showTargetBox, setShowTargetBox] = useState(false)
   const [menuLoc, setMenuLoc] = useState({ x: 0, y: 0 })
   const [snackbar, setSnackbar] = useState({
@@ -22,19 +21,27 @@ function GameImage({ characters, setCharacters }) {
       x: (event.pageX / imageRef.current.offsetWidth) * 100,
       y: (event.pageY / imageRef.current.offsetHeight) * 100,
     })
+    console.log(menuLoc)
     setShowTargetBox(!showTargetBox)
   }
 
-  const isClickValid = (x, y, charX, charY) => {
-    console.log(charX, charY)
-    return x > charX - 2 && x < charX + 2 && y > charY - 2 && y < charY + 2
+  const isClickValid = (x, y, charX, charY, delta) => {
+    return (
+      x > charX - delta &&
+      x < charX + delta &&
+      y > charY - delta &&
+      y < charY + delta
+    )
   }
 
   const handleMenuClick = (xPos, yPos, name) => {
+    // const yPosAdjusted = yPos - (72 / imageRef.current.offsetHeight) * 100 // adjusted for 72px margin between header and image
     setCharacters((prevCharacters) => {
       const updatedCharacterList = prevCharacters.map((character) => {
         if (character.name === name) {
-          if (isClickValid(xPos, yPos, character.x, character.y)) {
+          if (
+            isClickValid(xPos, yPos, character.x, character.y, character.delta)
+          ) {
             setSnackbar({
               text: `Congrats! You found ${name}!`,
               bgColor: 'green',
