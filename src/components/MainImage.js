@@ -4,11 +4,9 @@ import image from '../assets/default.jpg'
 import Credit from './Credit'
 import styles from '../styles/MainImage.module.css'
 import { useRef } from 'react'
-import { useEffect } from 'react'
 import Snackbar from './Snackbar'
-import { characters } from '../data/data'
 
-function MainImage({ characters, setCharacters, setIsGameFinished }) {
+function MainImage({ characters, setCharacters }) {
   const [showTargetBox, setShowTargetBox] = useState(false)
   const [menuLoc, setMenuLoc] = useState({ x: 0, y: 0 })
   const [snackbar, setSnackbar] = useState({
@@ -56,29 +54,6 @@ function MainImage({ characters, setCharacters, setIsGameFinished }) {
       return updatedCharacterList
     })
 
-    // characters.forEach((character) => {
-    // if (character.name === name) {
-    //   if (isClickValid(xPos, yPos, character.x, character.y)) {
-    //     setSnackbar({
-    //       text: `Congrats! You found ${name}!`,
-    //       bgColor: 'green',
-    //       show: true,
-    //     })
-    //     newCharacters.push({ ...character, found: true })
-
-    //     console.log(characters)
-    //   } else {
-    //     setSnackbar({
-    //       text: `You chose wrong. Keep Looking!`,
-    //       bgColor: 'red',
-    //       show: true,
-    //     })
-    // newCharacters.push(character)
-    // }
-    // }
-    // })
-    // console.log(newCharacters)
-
     setTimeout(
       () =>
         setSnackbar({
@@ -89,10 +64,6 @@ function MainImage({ characters, setCharacters, setIsGameFinished }) {
       1800
     )
   }
-
-  // useEffect(() => {
-  //   setIsGameFinished(characters.every((character) => character.found === true))
-  // }, [])
 
   return (
     <div className={styles.container} onClick={handleClick} ref={imageRef}>
