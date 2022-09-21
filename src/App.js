@@ -6,15 +6,13 @@ import { characters } from './data/data'
 
 function App() {
   const [isGameFinished, setIsGameFinished] = useState(false)
-  // const [filteredItems, setFilteredItems] = useState([])
   const [characterList, setCharacterList] = useState(characters)
 
   useEffect(() => {
-    setIsGameFinished(characters.every((character) => character.found === true))
-  }, [])
-
-  console.log(characters)
-  console.log(isGameFinished)
+    setIsGameFinished(
+      characterList.every((character) => character.found === true)
+    )
+  }, [characterList])
 
   return (
     <div className='App'>
