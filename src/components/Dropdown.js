@@ -5,7 +5,7 @@ import styles from '../styles/Dropdown.module.css'
 function Dropdown() {
   const [isVisible, setIsVisible] = useState(false)
   return (
-    <>
+    <div className={styles.root}>
       <button
         className={styles.dropdown}
         onClick={() => setIsVisible(!isVisible)}
@@ -13,7 +13,7 @@ function Dropdown() {
         3
       </button>
       {isVisible && <DropdownMenu />}
-    </>
+    </div>
   )
 }
 
