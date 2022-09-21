@@ -4,11 +4,13 @@ import Dropdown from './Dropdown'
 
 import styles from '../styles/Header.module.css'
 
-function Header({ characters }) {
+function Header({ characters, isGameFinished }) {
   return (
     <header className={styles.header}>
-      <h1>waldow</h1>
-      <Timer />
+      <h1>
+        <a href='/'>waldow</a>
+      </h1>
+      <Timer isGameFinished={isGameFinished} />
       <Dropdown characters={characters} />
     </header>
   )

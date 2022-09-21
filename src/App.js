@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Header characters={characterList} />
+      <Header characters={characterList} isGameFinished={isGameFinished} />
       {isGameFinished && <HighScoreModal />}
       <GameImage
         characters={characterList}
