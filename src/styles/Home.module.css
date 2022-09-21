@@ -4,7 +4,23 @@
   height: 100vh;
   color: red;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   font-size: 50px;
+}
+
+.img {
+  max-height: 100%;
+  max-width: 300px;
+  height: 500px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: linear 250ms;
+  cursor: pointer;
+}
+
+.img:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.85);
 }
