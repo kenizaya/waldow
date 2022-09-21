@@ -6,7 +6,7 @@ function DropdownMenu({ characters }) {
     <div className={styles['dropdown-menu']}>
       {characters.map((character) => (
         <div>
-          <h3 className={styles.dif}>{character.difficulty}</h3>
+          <h3 className={styles.difficulty}>{character.difficulty}</h3>
           <div className={styles.item}>
             <img src={character.image} alt='' className={styles.img} />
             <div className={styles.info}>

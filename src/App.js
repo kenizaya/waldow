@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from './components/Header'
-import MainImage from './components/MainImage'
+import GameImage from './components/GameImage'
 import HighScoreModal from './components/HighScoreModal'
 import { characters } from './data/data'
 
@@ -18,7 +18,7 @@ function App() {
     <div className='App'>
       <Header characters={characterList} />
       {isGameFinished && <HighScoreModal />}
-      <MainImage
+      <GameImage
         characters={characterList}
         setIsGameFinished={setIsGameFinished}
         setCharacters={setCharacterList}

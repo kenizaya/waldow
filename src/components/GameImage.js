@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import TargetBox from './TargetBox'
-import image from '../assets/default.jpg'
+import image from '../assets/theLocNar.jpg'
 import Credit from './Credit'
-import styles from '../styles/MainImage.module.css'
+import styles from '../styles/GameImage.module.css'
 import { useRef } from 'react'
 import Snackbar from './Snackbar'
 
-function MainImage({ characters, setCharacters }) {
+function GameImage({ characters, setCharacters }) {
   const [showTargetBox, setShowTargetBox] = useState(false)
   const [menuLoc, setMenuLoc] = useState({ x: 0, y: 0 })
   const [snackbar, setSnackbar] = useState({
@@ -96,4 +96,4 @@ function MainImage({ characters, setCharacters }) {
   )
 }
 
-export default MainImage
+export default GameImage
