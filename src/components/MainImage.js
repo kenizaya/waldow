@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 import Snackbar from './Snackbar'
 import { characters } from '../data/data'
 
-function MainImage() {
+function MainImage({ setIsGameFinished }) {
   const [showTargetBox, setShowTargetBox] = useState(false)
   const [menuLoc, setMenuLoc] = useState({ x: 0, y: 0 })
   const [snackbar, setSnackbar] = useState({
@@ -16,7 +16,6 @@ function MainImage() {
     bgColor: 'red',
     show: false,
   })
-  const [isGameFinished, setIsGameFinished] = useState(false)
 
   const imageRef = useRef()
 
@@ -54,6 +53,8 @@ function MainImage() {
       }
     })
 
+    setIsGameFinished(characters.every((character) => character.found === true))
+
     setTimeout(
       () =>
         setSnackbar({
@@ -64,6 +65,10 @@ function MainImage() {
       1800
     )
   }
+
+  // useEffect(() => {
+  //   setIsGameFinished(characters.every((character) => character.found === true))
+  // }, [])
 
   return (
     <div className={styles.container} onClick={handleClick} ref={imageRef}>

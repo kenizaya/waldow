@@ -4,12 +4,12 @@ import Dropdown from './Dropdown'
 
 import styles from '../styles/Header.module.css'
 
-function Header() {
+function Header({ characters }) {
   return (
     <header className={styles.header}>
       <h1>waldow</h1>
       <Timer />
-      <Dropdown />
+      <Dropdown characters={characters} />
     </header>
   )
 }

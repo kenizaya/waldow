@@ -14,14 +14,13 @@
   background-color: aliceblue;
   border-radius: 0.4rem;
   list-style: none;
-  padding: 12px;
-  margin: 0;
+  padding: 0;
   cursor: pointer;
   transform: translate(32%, 15%);
 }
 
 .list-item {
-  padding-bottom: 12px;
+  padding: 8px 12px;
   transition: transform 250ms;
 }
 
