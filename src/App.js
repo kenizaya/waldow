@@ -9,17 +9,22 @@ function App() {
   // const [filteredItems, setFilteredItems] = useState([])
   const [characterList, setCharacterList] = useState(characters)
 
-  // useEffect(() => {
-  //   // setIsGameFinished(characters.every((character) => character.found === true))
-  // setFilteredItems(characters.filter((character) => !character.found))
-  //   console.log(filteredItems)
-  // }, [])
+  useEffect(() => {
+    setIsGameFinished(characters.every((character) => character.found === true))
+  }, [])
+
+  console.log(characters)
   console.log(isGameFinished)
+
   return (
     <div className='App'>
-      <Header />
+      <Header characters={characterList} />
       {isGameFinished && <HighScoreModal />}
-      <MainImage setIsGameFinished={setIsGameFinished} />
+      <MainImage
+        characters={characterList}
+        setIsGameFinished={setIsGameFinished}
+        setCharacters={setCharacterList}
+      />
     </div>
   )
 }

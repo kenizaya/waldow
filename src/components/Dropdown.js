@@ -3,7 +3,7 @@ import DropdownMenu from './DropdownMenu'
 import { characters } from '../data/data'
 import styles from '../styles/Dropdown.module.css'
 
-function Dropdown() {
+function Dropdown({ characters }) {
   const filteredCharacters = characters.filter((character) => !character.found)
 
   const [isVisible, setIsVisible] = useState(false)

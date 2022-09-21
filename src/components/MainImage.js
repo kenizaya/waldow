@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 import Snackbar from './Snackbar'
 import { characters } from '../data/data'
 
-function MainImage({ setIsGameFinished }) {
+function MainImage({ characters, setCharacters, setIsGameFinished }) {
   const [showTargetBox, setShowTargetBox] = useState(false)
   const [menuLoc, setMenuLoc] = useState({ x: 0, y: 0 })
   const [snackbar, setSnackbar] = useState({
@@ -33,27 +33,51 @@ function MainImage({ setIsGameFinished }) {
   }
 
   const handleMenuClick = (xPos, yPos, name) => {
-    characters.forEach((character) => {
-      if (character.name === name) {
-        console.log('first')
-        if (isClickValid(xPos, yPos, character.x, character.y)) {
-          setSnackbar({
-            text: `Congrats! You found ${name}!`,
-            bgColor: 'green',
-            show: true,
-          })
-          character.found = true
-        } else {
-          setSnackbar({
-            text: `You chose wrong. Keep Looking!`,
-            bgColor: 'red',
-            show: true,
-          })
+    setCharacters((prevCharacters) => {
+      const updatedCharacterList = prevCharacters.map((character) => {
+        if (character.name === name) {
+          if (isClickValid(xPos, yPos, character.x, character.y)) {
+            setSnackbar({
+              text: `Congrats! You found ${name}!`,
+              bgColor: 'green',
+              show: true,
+            })
+            return { ...character, found: true }
+          } else {
+            setSnackbar({
+              text: `You chose wrong. Keep Looking!`,
+              bgColor: 'red',
+              show: true,
+            })
+          }
         }
-      }
+        return character
+      })
+      return updatedCharacterList
     })
 
-    setIsGameFinished(characters.every((character) => character.found === true))
+    // characters.forEach((character) => {
+    // if (character.name === name) {
+    //   if (isClickValid(xPos, yPos, character.x, character.y)) {
+    //     setSnackbar({
+    //       text: `Congrats! You found ${name}!`,
+    //       bgColor: 'green',
+    //       show: true,
+    //     })
+    //     newCharacters.push({ ...character, found: true })
+
+    //     console.log(characters)
+    //   } else {
+    //     setSnackbar({
+    //       text: `You chose wrong. Keep Looking!`,
+    //       bgColor: 'red',
+    //       show: true,
+    //     })
+    // newCharacters.push(character)
+    // }
+    // }
+    // })
+    // console.log(newCharacters)
 
     setTimeout(
       () =>
