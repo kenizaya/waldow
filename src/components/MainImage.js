@@ -75,6 +75,7 @@ function MainImage() {
           xPos={menuLoc.x}
           yPos={menuLoc.y}
           handleMenuClick={handleMenuClick}
+          characters={characters.filter((character) => !character.found)}
         />
       )}
 

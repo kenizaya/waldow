@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { characters } from '../data/data'
+// import { characters } from '../data/data'
 import styles from '../styles/TargetBox.module.css'
 import { useState } from 'react'
 
-const TargetBox = ({ xPos, yPos, handleMenuClick }) => {
+const TargetBox = ({ xPos, yPos, handleMenuClick, characters }) => {
   const handleCLick = (event) => {
     const clickedItem = event.target.textContent
     handleMenuClick(xPos, yPos, clickedItem)

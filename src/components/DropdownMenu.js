@@ -1,9 +1,7 @@
 import React from 'react'
-import { characters } from '../data/data'
-
 import styles from '../styles/DropdownMenu.module.css'
 
-function DropdownMenu() {
+function DropdownMenu({ characters }) {
   return (
     <div className={styles['dropdown-menu']}>
       {characters.map((character) => (
