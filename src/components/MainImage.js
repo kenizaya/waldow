@@ -5,10 +5,17 @@ import image from '../assets/default.jpg'
 import styles from '../styles/MainImage.module.css'
 import { useRef } from 'react'
 import { useEffect } from 'react'
+import Snackbar from './Snackbar'
 
 function MainImage() {
   const [showTargetBox, setShowTargetBox] = useState(false)
   const [menuLoc, setMenuLoc] = useState({ x: 0, y: 0 })
+  const [snackbar, setSnackbar] = useState({
+    text: '',
+    bgColor: 'red',
+    show: false,
+  })
+  const [isGameFinished, setIsGameFinished] = useState(false)
   const [characterLoc, setCharacterLoc] = useState([
     {
       name: 'Bowser',
@@ -53,15 +60,36 @@ function MainImage() {
           isClickValid(xPos, yPos, character.x, character.y) &&
           character.name === name
         ) {
+          setSnackbar({
+            text: `Congrats! You found ${name}!`,
+            bgColor: 'green',
+            show: true,
+          })
           return { ...character, hasFound: true }
-        } else return character
+        } else {
+          setSnackbar({
+            text: `You chose wrong. Keep looking!`,
+            bgColor: 'red',
+            show: true,
+          })
+          return character
+        }
       })
       return newItem
     })
   }
 
+  useEffect(() => {
+    setIsGameFinished(
+      characterLoc.every((character) => character.hasFound === true)
+    )
+  }, [characterLoc])
+
   return (
     <div className={styles.container} onClick={handleClick} ref={imageRef}>
+      {snackbar.show && (
+        <Snackbar text={snackbar.text} bgColor={snackbar.bgColor} />
+      )}
       {showTargetBox && (
         <TargetBox
           xPos={menuLoc.x}
