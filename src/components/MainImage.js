@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import TargetBox from './TargetBox'
 import image from '../assets/default.jpg'
-
+import Credit from './Credit'
 import styles from '../styles/MainImage.module.css'
 import { useRef } from 'react'
 import { useEffect } from 'react'
@@ -80,6 +80,18 @@ function MainImage() {
       )}
 
       <img className={styles.img} src={image} alt='Game' />
+      <Credit
+        position='left'
+        text='by'
+        author='kenizaya'
+        link='https://github.com/kenizaya/'
+      />
+      <Credit
+        position='right'
+        text='Image by'
+        author='Egor Klyuchnyk'
+        link='https://www.instagram.com/ad.2.222/'
+      />
     </div>
   )
 }

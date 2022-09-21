@@ -1,0 +1,26 @@
+.credit {
+  position: absolute;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border-radius: 8px;
+  bottom: 28px;
+  font-size: 1.1rem;
+}
+
+.credit a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+.credit:hover {
+  background-color: white;
+}
+
+.left {
+  left: 28px;
+}
+
+.right {
+  right: 28px;
+}
