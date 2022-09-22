@@ -4,6 +4,7 @@ import Credit from './Credit'
 import styles from '../styles/GameImage.module.css'
 import { useRef } from 'react'
 import Snackbar from './Snackbar'
+import { useEffect } from 'react'
 
 function GameImage({ characters, setCharacters, image }) {
   const [showTargetBox, setShowTargetBox] = useState(false)
@@ -43,14 +44,14 @@ function GameImage({ characters, setCharacters, image }) {
           ) {
             setSnackbar({
               text: `Congrats! You found ${name}!`,
-              bgColor: 'green',
+              bgColor: '#63921A',
               show: true,
             })
             return { ...character, found: true }
           } else {
             setSnackbar({
               text: `You chose wrong. Keep Looking!`,
-              bgColor: 'red',
+              bgColor: '#BA2525',
               show: true,
             })
           }
@@ -59,8 +60,10 @@ function GameImage({ characters, setCharacters, image }) {
       })
       return updatedCharacterList
     })
+  }
 
-    setTimeout(
+  useEffect(() => {
+    const delay = setTimeout(
       () =>
         setSnackbar({
           text: ``,
@@ -69,7 +72,9 @@ function GameImage({ characters, setCharacters, image }) {
         }),
       1800
     )
-  }
+
+    return () => clearTimeout(delay)
+  }, [characters])
 
   return (
     <div className={styles.container} onClick={handleClick} ref={imageRef}>

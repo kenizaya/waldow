@@ -2,7 +2,7 @@
   position: absolute;
   top: 100%;
   left: 67%;
-  background-color: blueviolet;
+  background-color: #de911d;
   padding: 20px;
   border-radius: 8px;
 }
@@ -10,9 +10,10 @@
 .item {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   gap: 30px;
   transition: transform 200ms;
-  color: aliceblue;
+  color: #faf9f7;
 }
 
 .item:hover {
@@ -26,6 +27,7 @@
 .difficulty {
   font-size: 1rem;
   text-align: right;
+  color: #911111;
 }
 
 .img {

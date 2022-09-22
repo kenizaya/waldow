@@ -31,7 +31,7 @@ function Timer({ isGameFinished }) {
     }
   }, [isGameFinished, timer])
 
-  return <span>{formatDuration(timer)}</span>
+  return <span className={styles.timer}>{formatDuration(timer)}</span>
 }
 
 export default Timer

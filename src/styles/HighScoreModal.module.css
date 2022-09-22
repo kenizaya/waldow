@@ -41,4 +41,14 @@
   cursor: pointer;
   margin-left: 20px;
   border-radius: 8px;
+  background-color: #a61b1b;
+  color: #fce588;
+  font-size: 1.2rem;
+  border: 4px solid #a61b1b;
+  transition: ease-in-out 250ms;
+}
+
+.btn-restart:hover {
+  background-color: #fce588;
+  color: #a61b1b;
 }

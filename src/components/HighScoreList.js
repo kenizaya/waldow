@@ -10,7 +10,11 @@ const HighScoreList = () => {
       <h2 className={styles.h2}>Highscores</h2>
       <ol>
         {highScores.map((item) => {
-          return <li>{`${item[0]}  -  ${formatDuration(item[1])}`}</li>
+          return (
+            <li className={styles.item}>{`${item[0]}  -  ${formatDuration(
+              item[1]
+            )}`}</li>
+          )
         })}
       </ol>
     </div>

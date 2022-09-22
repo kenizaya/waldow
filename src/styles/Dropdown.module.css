@@ -1,17 +1,18 @@
 .dropdown {
-  background-color: #a32222;
-  height: 40px;
-  width: 40px;
+  background-color: #de911d;
+  height: 44px;
+  width: 44px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   font-size: 28px;
-  color: white;
+  color: #610404;
   border: none;
   outline: none;
   cursor: pointer;
 }
 .dropdown:hover {
-  background-color: #c52323;
+  background-color: #8d2b0b;
+  color: #faf9f7;
 }

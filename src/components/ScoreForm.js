@@ -23,6 +23,9 @@ const ScoreForm = ({ setShowHighScores, setShowForm, time }) => {
             name='username'
             id='username'
             placeholder='John'
+            minLength={3}
+            maxLength={20}
+            required
             onChange={(event) => setUsername(event.target.value)}
           />
         </div>
