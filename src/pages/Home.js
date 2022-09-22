@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuid } from 'uuid'
 import { Link } from 'react-router-dom'
 import styles from '../styles/Home.module.css'
 import { levels } from '../data/levels'
@@ -13,7 +14,7 @@ const Home = () => {
       <div className={styles.container}>
         {Object.keys(levels).map((level) => {
           return (
-            <div className={styles['img-container']}>
+            <div className={styles['img-container']} key={uuid()}>
               <Link to='play' state={levels[level]}>
                 <img
                   className={styles.img}
@@ -23,7 +24,9 @@ const Home = () => {
               </Link>
               <div className={styles.characters}>
                 {levels[level].data.map((character) => {
-                  return <img src={character.image} alt={character} />
+                  return (
+                    <img src={character.image} alt={character} key={uuid()} />
+                  )
                 })}
               </div>
             </div>

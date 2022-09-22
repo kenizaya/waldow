@@ -26,7 +26,7 @@ function GameImage({ characters, setCharacters, image }) {
     console.log(menuLoc)
   }
 
-  const isClickValid = (x, y, charX, charY, delta) => {
+  const isClickValid = (x, y, charX, charY, delta = 4) => {
     return (
       x > charX - delta &&
       x < charX + delta &&
@@ -39,9 +39,7 @@ function GameImage({ characters, setCharacters, image }) {
     setCharacters((prevCharacters) => {
       const updatedCharacterList = prevCharacters.map((character) => {
         if (character.name === name) {
-          if (
-            isClickValid(xPos, yPos, character.x, character.y, character.delta)
-          ) {
+          if (isClickValid(xPos, yPos, character.x, character.y)) {
             setSnackbar({
               text: `Congrats! You found ${name}!`,
               bgColor: '#63921A',

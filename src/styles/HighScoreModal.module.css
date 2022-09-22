@@ -15,9 +15,9 @@
   align-items: center;
   height: 580px;
   width: 600px;
-  color: black;
+  color: #27241d;
   border-radius: 8px;
-  background-color: white;
+  background-color: #faf9f7;
 }
 
 .right-container {
@@ -51,4 +51,14 @@
 .btn-restart:hover {
   background-color: #fce588;
   color: #a61b1b;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    height: 450px;
+    width: 320px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
 }

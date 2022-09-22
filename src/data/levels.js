@@ -24,7 +24,6 @@ export const levels = {
         difficulty: 'easy',
         x: 63.86,
         y: 64.15,
-        delta: 3,
         found: false,
       },
       {
@@ -34,7 +33,6 @@ export const levels = {
         difficulty: 'medium',
         x: 70.63,
         y: 39.1,
-        delta: 2,
         found: false,
       },
       {
@@ -44,7 +42,6 @@ export const levels = {
         difficulty: 'hard',
         x: 43.75,
         y: 39.46,
-        delta: 1,
         found: false,
       },
     ],
@@ -59,7 +56,6 @@ export const levels = {
         difficulty: 'easy',
         x: 82,
         y: 40.5,
-        delta: 4,
         found: false,
       },
       {
@@ -69,7 +65,6 @@ export const levels = {
         difficulty: 'medium',
         x: 50.39,
         y: 5.42,
-        delta: 2,
         found: false,
       },
       {
@@ -79,7 +74,6 @@ export const levels = {
         difficulty: 'hard',
         x: 57.95,
         y: 91.67,
-        delta: 1,
         found: false,
       },
     ],
@@ -95,7 +89,6 @@ export const levels = {
         difficulty: 'easy',
         x: 50.26,
         y: 26.03,
-        delta: 4,
         found: false,
       },
       {
@@ -105,7 +98,6 @@ export const levels = {
         difficulty: 'medium',
         x: 69.42,
         y: 65.17,
-        delta: 2,
         found: false,
       },
       {
@@ -115,7 +107,6 @@ export const levels = {
         difficulty: 'hard',
         x: 29.76,
         y: 52.23,
-        delta: 1,
         found: false,
       },
     ],

@@ -12,3 +12,9 @@
     cursor: url(../assets/custom-cursor.svg), auto;
   }
 }
+
+@media (max-width: 600px) {
+  .img {
+    margin-top: 40px;
+  }
+}

@@ -14,3 +14,15 @@
 .item {
   line-height: 1.8;
 }
+
+@media (max-width: 600px) {
+  .h2 {
+    font-size: 1.6rem;
+  }
+  .high-scores {
+    gap: 8px;
+  }
+  .item {
+    line-height: 1.1;
+  }
+}

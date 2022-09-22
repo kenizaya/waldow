@@ -24,3 +24,10 @@
 .right {
   right: 28px;
 }
+
+@media (max-width: 600px) {
+  .credit {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}

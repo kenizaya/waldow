@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  font-size: 28px;
+  font-size: 1.8rem;
   color: #610404;
   border: none;
   outline: none;
@@ -15,4 +15,12 @@
 .dropdown:hover {
   background-color: #8d2b0b;
   color: #faf9f7;
+}
+
+@media (max-width: 600px) {
+  .dropdown {
+    height: 22px;
+    width: 22px;
+    font-size: 1.2rem;
+  }
 }
