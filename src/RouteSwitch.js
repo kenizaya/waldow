@@ -4,7 +4,7 @@ import App from './App'
 
 const RouteSwitch = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/waldow'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/play' element={<App />} />
