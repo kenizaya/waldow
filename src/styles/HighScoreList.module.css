@@ -1,0 +1,12 @@
+.h2 {
+  font-size: 2rem;
+}
+
+.high-scores {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 250px;
+}

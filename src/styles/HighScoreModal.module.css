@@ -9,13 +9,21 @@
   z-index: 100;
 }
 
-.div {
+.modal {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  height: 500px;
-  width: 500px;
+  height: 580px;
+  width: 600px;
   color: black;
   border-radius: 8px;
   background-color: white;
+}
+
+.btn-restart {
+  padding: 10px 20px;
+  max-width: 250px;
+  width: 100%;
+  cursor: pointer;
+  margin-left: 20px;
 }
