@@ -26,13 +26,13 @@
   gap: 16px;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   width: 100%;
   max-width: 250px;
 }
 
 .time {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .btn-restart {

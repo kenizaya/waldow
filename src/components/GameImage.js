@@ -22,6 +22,7 @@ function GameImage({ characters, setCharacters, image }) {
       y: (event.pageY / imageRef.current.offsetHeight) * 100,
     })
     setShowTargetBox(!showTargetBox)
+    console.log(menuLoc)
   }
 
   const isClickValid = (x, y, charX, charY, delta) => {

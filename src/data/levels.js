@@ -1,3 +1,8 @@
+import robotCity from '../assets/robot-city.jpg'
+import goku from '../assets/goku.png'
+import mrPoopybutthole from '../assets/mrPoopybutthole.png'
+import childEmperor from '../assets/childEmperor.png'
+
 import theLocNar from '../assets/theLocNar.jpg'
 import bowser from '../assets/bowser.png'
 import yubaba from '../assets/yubaba.png'
@@ -7,6 +12,42 @@ import universe113 from '../assets/universe-113.jpg'
 import cacodemon from '../assets/cacodemon.png'
 import billCypher from '../assets/bill-cipher.png'
 import courage from '../assets/courage.png'
+
+export const robotCityData = {
+  board: robotCity,
+  data: [
+    {
+      name: 'Goku',
+      from: 'Dragon Ball Z',
+      image: goku,
+      difficulty: 'easy',
+      x: 63.86,
+      y: 64.15,
+      delta: 3,
+      found: false,
+    },
+    {
+      name: 'Mr. PB',
+      from: 'Rick and Morty',
+      image: mrPoopybutthole,
+      difficulty: 'medium',
+      x: 70.63,
+      y: 39.1,
+      delta: 2,
+      found: false,
+    },
+    {
+      name: 'Child Emperor',
+      from: 'One Punch Man',
+      image: childEmperor,
+      difficulty: 'hard',
+      x: 43.75,
+      y: 39.46,
+      delta: 1,
+      found: false,
+    },
+  ],
+}
 
 export const locData = {
   board: theLocNar,
