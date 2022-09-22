@@ -5,15 +5,15 @@ import GameImage from './components/GameImage'
 import HighScoreModal from './components/HighScoreModal'
 
 function App() {
-  const [isGameFinished, setIsGameFinished] = useState(true)
+  const [isGameFinished, setIsGameFinished] = useState(false)
   const location = useLocation()
   const [characterList, setCharacterList] = useState(location.state.data)
 
-  // useEffect(() => {
-  //   setIsGameFinished(
-  //     characterList.every((character) => character.found === true)
-  //   )
-  // }, [characterList])
+  useEffect(() => {
+    setIsGameFinished(
+      characterList.every((character) => character.found === true)
+    )
+  }, [characterList])
 
   return (
     <div className='App'>

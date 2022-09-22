@@ -20,10 +20,25 @@
   background-color: white;
 }
 
+.right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 100%;
+  max-width: 250px;
+}
+
+.time {
+  font-size: 2rem;
+}
+
 .btn-restart {
   padding: 10px 20px;
-  max-width: 250px;
   width: 100%;
   cursor: pointer;
   margin-left: 20px;
+  border-radius: 8px;
 }

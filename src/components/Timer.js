@@ -9,6 +9,8 @@ export const formatDuration = (interval) => {
   return `${hours}:${minutes}:${seconds}`
 }
 
+export let time = 0
+
 function Timer({ isGameFinished }) {
   const [timer, setTimer] = useState(0)
 
@@ -16,6 +18,7 @@ function Timer({ isGameFinished }) {
     let interval
     if (!isGameFinished) {
       interval = setInterval(() => setTimer((prevTimer) => prevTimer + 1), 1000)
+      time = timer
     } else {
       return () => {
         setTimer(0)
@@ -26,7 +29,7 @@ function Timer({ isGameFinished }) {
     return () => {
       clearInterval(interval)
     }
-  }, [isGameFinished])
+  }, [isGameFinished, timer])
 
   return <span>{formatDuration(timer)}</span>
 }

@@ -5,8 +5,11 @@
 .high-scores {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
   font-size: 1.2rem;
   width: 250px;
+}
+
+.item {
 }
