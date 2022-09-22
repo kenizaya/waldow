@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/waldow/static/css/main.74088c29.css",
-    "main.js": "/waldow/static/js/main.7860139c.js",
+    "main.js": "/waldow/static/js/main.ecb2c7dd.js",
     "static/media/theLocNar.jpg": "/waldow/static/media/theLocNar.314cec99f414807b7e27.jpg",
     "static/media/robot-city.jpg": "/waldow/static/media/robot-city.8ad8cd812dae8d55031c.jpg",
     "static/media/universe-113.jpg": "/waldow/static/media/universe-113.0d4fe7c106039f77baa0.jpg",
@@ -17,10 +17,10 @@
     "index.html": "/waldow/index.html",
     "static/media/custom-cursor.svg": "/waldow/static/media/custom-cursor.a1125529a9825ee93790.svg",
     "main.74088c29.css.map": "/waldow/static/css/main.74088c29.css.map",
-    "main.7860139c.js.map": "/waldow/static/js/main.7860139c.js.map"
+    "main.ecb2c7dd.js.map": "/waldow/static/js/main.ecb2c7dd.js.map"
   },
   "entrypoints": [
     "static/css/main.74088c29.css",
-    "static/js/main.7860139c.js"
+    "static/js/main.ecb2c7dd.js"
   ]
 }
