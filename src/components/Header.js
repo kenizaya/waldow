@@ -8,7 +8,7 @@ function Header({ characters, isGameFinished }) {
   return (
     <header className={styles.header}>
       <h1>
-        <a href='/'>waldow</a>
+        <a href='/waldow'>waldow</a>
       </h1>
       <Timer isGameFinished={isGameFinished} />
       <Dropdown characters={characters} />
