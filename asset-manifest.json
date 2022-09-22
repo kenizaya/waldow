@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/waldow/static/css/main.74088c29.css",
+    "main.js": "/waldow/static/js/main.7860139c.js",
+    "static/media/theLocNar.jpg": "/waldow/static/media/theLocNar.314cec99f414807b7e27.jpg",
+    "static/media/robot-city.jpg": "/waldow/static/media/robot-city.8ad8cd812dae8d55031c.jpg",
+    "static/media/universe-113.jpg": "/waldow/static/media/universe-113.0d4fe7c106039f77baa0.jpg",
+    "static/media/goku.png": "/waldow/static/media/goku.a6467a8126600b90930c.png",
+    "static/media/cacodemon.png": "/waldow/static/media/cacodemon.1dad269cc1ccf2bab1a0.png",
+    "static/media/bill-cipher.png": "/waldow/static/media/bill-cipher.1e7e0fc476bd3a1ae4e8.png",
+    "static/media/yubaba.png": "/waldow/static/media/yubaba.124d78907c3fe76760bc.png",
+    "static/media/bowser.png": "/waldow/static/media/bowser.79c5eb2bbc827836b9d7.png",
+    "static/media/mrPoopybutthole.png": "/waldow/static/media/mrPoopybutthole.3e8896bdc5c2feaa9659.png",
+    "static/media/childEmperor.png": "/waldow/static/media/childEmperor.4587067123a1b2e3b443.png",
+    "static/media/the-knight.webp": "/waldow/static/media/the-knight.b0014b3db7961de88c65.webp",
+    "static/media/courage.png": "/waldow/static/media/courage.200fe7a8a879d4131733.png",
+    "index.html": "/waldow/index.html",
+    "static/media/custom-cursor.svg": "/waldow/static/media/custom-cursor.a1125529a9825ee93790.svg",
+    "main.74088c29.css.map": "/waldow/static/css/main.74088c29.css.map",
+    "main.7860139c.js.map": "/waldow/static/js/main.7860139c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74088c29.css",
+    "static/js/main.7860139c.js"
+  ]
+}
