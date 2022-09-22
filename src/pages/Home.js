@@ -9,7 +9,7 @@ const Home = () => {
       <header className={styles.header}>
         <h1>waldow</h1>
       </header>
-
+      <p className={styles.p}>Find the characters as fast as possible</p>
       <div className={styles.container}>
         {Object.keys(levels).map((level) => {
           return (
