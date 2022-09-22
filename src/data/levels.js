@@ -1,17 +1,17 @@
-import robotCity from '../assets/robot-city.jpg'
-import goku from '../assets/goku.png'
-import mrPoopybutthole from '../assets/mrPoopybutthole.png'
-import childEmperor from '../assets/childEmperor.png'
+import robotCity from '../assets/robotCity/robot-city.jpg'
+import goku from '../assets/robotCity/goku.png'
+import mrPoopybutthole from '../assets/robotCity/mrPoopybutthole.png'
+import childEmperor from '../assets/robotCity/childEmperor.png'
 
-import theLocNar from '../assets/theLocNar.jpg'
-import bowser from '../assets/bowser.png'
-import yubaba from '../assets/yubaba.png'
-import knight from '../assets/the-knight.webp'
+import theLocNar from '../assets/theLocNar/theLocNar.jpg'
+import bowser from '../assets/theLocNar/bowser.png'
+import yubaba from '../assets/theLocNar/yubaba.png'
+import knight from '../assets/theLocNar/the-knight.webp'
 
-import universe113 from '../assets/universe-113.jpg'
-import cacodemon from '../assets/cacodemon.png'
-import billCypher from '../assets/bill-cipher.png'
-import courage from '../assets/courage.png'
+import universe113 from '../assets/universe113/universe-113.jpg'
+import cacodemon from '../assets/universe113/cacodemon.png'
+import billCypher from '../assets/universe113/bill-cipher.png'
+import courage from '../assets/universe113/courage.png'
 
 export const robotCityData = {
   board: robotCity,
