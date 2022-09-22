@@ -34,7 +34,6 @@ function GameImage({ characters, setCharacters, image }) {
   }
 
   const handleMenuClick = (xPos, yPos, name) => {
-    // const yPosAdjusted = yPos - (72 / imageRef.current.offsetHeight) * 100 // adjusted for 72px margin between header and image
     setCharacters((prevCharacters) => {
       const updatedCharacterList = prevCharacters.map((character) => {
         if (character.name === name) {

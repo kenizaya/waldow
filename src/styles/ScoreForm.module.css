@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 250px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.btn-submit {
+  padding: 10px 15px;
+  border-radius: 8px;
+}
