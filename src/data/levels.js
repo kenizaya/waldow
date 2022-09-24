@@ -2,6 +2,8 @@ export const levels = {
   robotCityData: {
     board:
       'https://firebasestorage.googleapis.com/v0/b/waldow-waldow.appspot.com/o/waldow%2Fassets%2FrobotCity%2Frobot-city.jpg?alt=media&token=1b1b50c1-f72f-4959-91d3-a7da85c9f10c',
+    homeImage:
+      'https://firebasestorage.googleapis.com/v0/b/waldow-waldow.appspot.com/o/waldow%2Fassets%2FrobotCity%2Frobot-city_home.jpg?alt=media&token=3dedaca1-535a-4240-a886-663eb8e343cc',
     scores: {},
     data: [
       {
@@ -39,6 +41,8 @@ export const levels = {
   locData: {
     board:
       'https://firebasestorage.googleapis.com/v0/b/waldow-waldow.appspot.com/o/waldow%2Fassets%2FtheLocNar%2FtheLocNar.jpg?alt=media&token=b3d7c59e-626b-485a-868b-8af903838043',
+    homeImage:
+      'https://firebasestorage.googleapis.com/v0/b/waldow-waldow.appspot.com/o/waldow%2Fassets%2FtheLocNar%2FtheLocNar_home.jpg?alt=media&token=31f2802e-bc83-45d3-bae2-8bb22db11f0d',
     score: {},
     data: [
       {
@@ -77,6 +81,8 @@ export const levels = {
   uniData: {
     board:
       'https://firebasestorage.googleapis.com/v0/b/waldow-waldow.appspot.com/o/waldow%2Fassets%2Funiverse113%2Funiverse-113.jpg?alt=media&token=b9084dfa-c88c-4412-a40f-0d7b685d9eca',
+    homeImage:
+      'https://firebasestorage.googleapis.com/v0/b/waldow-waldow.appspot.com/o/waldow%2Fassets%2Funiverse113%2Funiverse-113_home.jpg?alt=media&token=b637d12e-42c3-43ba-b207-4335289a0c29',
     scores: {},
     data: [
       {

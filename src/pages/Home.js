@@ -18,7 +18,7 @@ const Home = () => {
               <Link to='play' state={levels[level]}>
                 <img
                   className={styles.img}
-                  src={levels[level].board}
+                  src={levels[level].homeImage}
                   alt={level}
                 />
               </Link>

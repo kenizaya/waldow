@@ -6,8 +6,8 @@ const ScoreForm = ({ setShowHighScores, setShowForm, time }) => {
   const [username, setUsername] = useState('')
 
   const handleSubmit = () => {
-    scores[username] = time
     setShowForm(false)
+    scores[username] = time
     setShowHighScores(true)
   }
   return (

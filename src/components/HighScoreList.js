@@ -1,5 +1,6 @@
 import React from 'react'
-import { scores, sortHighScore } from '../data/scores'
+import { scores } from '../data/scores'
+import { sortHighScore } from '../util/sortHighScore'
 import { formatDuration } from './Timer'
 import styles from '../styles/HighScoreList.module.css'
 
