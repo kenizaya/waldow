@@ -9,7 +9,8 @@
 
 @media (min-width: 768px) {
   .container {
-    cursor: url(../assets/custom-cursor.svg), auto;
+    cursor: url(https://firebasestorage.googleapis.com/v0/b/waldow-waldow.appspot.com/o/waldow%2Fassets%2Fcustom-cursor.svg?alt=media&token=bb936803-211e-4407-96dd-59a00f74f8db),
+      auto;
   }
 }
 
