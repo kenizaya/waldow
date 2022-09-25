@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid'
 import { db } from '../firebase'
 import { Link } from 'react-router-dom'
 import styles from '../styles/Home.module.css'
+import Loader from '../components/Loader'
 import Footer from '../components/Footer'
 
 const Home = () => {
@@ -37,30 +38,32 @@ const Home = () => {
       <header className={styles.header}>
         <h1>waldow</h1>
       </header>
-      {isPending && <h2>Loading...</h2>}
-      {error && <p className={styles.error}>{error}</p>}
+
       <p className={styles.p}>Find the characters as fast as possible</p>
       <div className={styles.container}>
-        {Object.keys(levels).map((level) => {
-          return (
-            <div className={styles['img-container']} key={uuid()}>
-              <Link to='play' state={levels[level]}>
-                <img
-                  className={styles.img}
-                  src={levels[level].homeImage}
-                  alt={level}
-                />
-              </Link>
-              <div className={styles.characters}>
-                {levels[level].data.map((character) => {
-                  return (
-                    <img src={character.image} alt={character} key={uuid()} />
-                  )
-                })}
+        {isPending && <Loader />}
+        {error && <p className={styles.error}>{error}</p>}
+        {!isPending &&
+          Object.keys(levels).map((level) => {
+            return (
+              <div className={styles['img-container']} key={uuid()}>
+                <Link to='play' state={levels[level]}>
+                  <img
+                    className={styles.img}
+                    src={levels[level].homeImage}
+                    alt={level}
+                  />
+                </Link>
+                <div className={styles.characters}>
+                  {levels[level].data.map((character) => {
+                    return (
+                      <img src={character.image} alt={character} key={uuid()} />
+                    )
+                  })}
+                </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
       </div>
       <Footer />
     </>
