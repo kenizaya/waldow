@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/waldow/static/css/main.af33f128.css",
-    "main.js": "/waldow/static/js/main.f1db34bb.js",
+    "main.js": "/waldow/static/js/main.f5ebdafd.js",
     "index.html": "/waldow/index.html",
     "main.af33f128.css.map": "/waldow/static/css/main.af33f128.css.map",
-    "main.f1db34bb.js.map": "/waldow/static/js/main.f1db34bb.js.map"
+    "main.f5ebdafd.js.map": "/waldow/static/js/main.f5ebdafd.js.map"
   },
   "entrypoints": [
     "static/css/main.af33f128.css",
-    "static/js/main.f1db34bb.js"
+    "static/js/main.f5ebdafd.js"
   ]
 }
