@@ -30,7 +30,9 @@ function App() {
   return (
     <div className='App'>
       <Header characters={characterList} isGameFinished={isGameFinished} />
-      {isGameFinished && <HighScoreModal />}
+      {isGameFinished && (
+        <HighScoreModal id={location.state.id} scores={location.state.scores} />
+      )}
       <GameImage
         characters={characterList}
         setIsGameFinished={setIsGameFinished}

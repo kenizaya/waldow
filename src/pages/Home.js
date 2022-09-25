@@ -47,7 +47,7 @@ const Home = () => {
           Object.keys(levels).map((level) => {
             return (
               <div className={styles['img-container']} key={uuid()}>
-                <Link to='play' state={levels[level]}>
+                <Link to='play' state={{ ...levels[level], id: level }}>
                   <img
                     className={styles.img}
                     src={levels[level].homeImage}

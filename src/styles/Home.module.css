@@ -1,8 +1,9 @@
 .header {
   background-color: #610404;
-  height: 72px;
+  height: 92px;
   font-size: 1.5rem;
   text-align: center;
+  padding-top: 10px;
 }
 
 .p {
@@ -10,6 +11,7 @@
   text-align: center;
   background-color: #27241d;
   color: #faf9f7;
+  margin-bottom: -50px;
 }
 
 .container {

@@ -7,13 +7,14 @@ import { sortHighScore } from '../util/sortHighScore'
 import ScoreForm from './ScoreForm'
 import { time, formatDuration } from './Timer'
 
-const HighScoreModal = () => {
+const HighScoreModal = ({ id }) => {
   const [showForm, setShowForm] = useState(false)
   const [showHighScores, setShowHighScores] = useState(false)
   const highScores = sortHighScore(scores)
 
   useEffect(() => {
-    if (time < highScores[highScores.length - 1][1]) setShowForm(true)
+    if (time < highScores[highScores.length - 1][1] || highScores.length < 10)
+      setShowForm(true)
   }, [])
 
   const navigate = useNavigate()
@@ -25,6 +26,7 @@ const HighScoreModal = () => {
             setShowHighScores={setShowHighScores}
             setShowForm={setShowForm}
             time={time}
+            id={id}
           />
         )}
         {showHighScores && <HighScoreList />}
