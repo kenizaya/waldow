@@ -39,7 +39,7 @@ const ScoreForm = ({
             id='username'
             placeholder='John'
             minLength={3}
-            maxLength={20}
+            maxLength={12}
             required
             onChange={(event) => setUsername(event.target.value)}
           />

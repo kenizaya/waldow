@@ -6,7 +6,6 @@ import styles from '../styles/HighScoreList.module.css'
 
 const HighScoreList = ({ scores }) => {
   const highScores = sortHighScore(scores)
-  console.log(scores)
   return (
     <div className={styles['high-scores']}>
       <h2 className={styles.h2}>Highscores</h2>

@@ -13,11 +13,13 @@ const HighScoreModal = ({ id, scores }) => {
   const highScores = sortHighScore(scores)
 
   useEffect(() => {
-    if (time < highScores[highScores.length - 1][1] || highScores.length < 10)
+    if (
+      highScores.length === 0 ||
+      time < highScores[highScores.length - 1][1] ||
+      highScores.length < 10
+    )
       setShowForm(true)
   }, [])
-
-  console.log(currentUserScore)
 
   const navigate = useNavigate()
   return (
