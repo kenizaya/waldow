@@ -6,6 +6,7 @@ const ScoreForm = ({
   setCurrentUserScore,
   setShowHighScores,
   setShowForm,
+  scores,
   time,
   id,
 }) => {
@@ -13,16 +14,21 @@ const ScoreForm = ({
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setShowForm(false)
-    try {
-      await db
-        .collection('levels')
-        .doc(id)
-        .update({ [`scores.${username}`]: time })
-      setCurrentUserScore({ [username]: time })
-      setShowHighScores(true)
-    } catch (err) {
-      console.log(err)
+
+    if (!(username in scores)) {
+      setShowForm(false)
+      try {
+        await db
+          .collection('levels')
+          .doc(id)
+          .update({ [`scores.${username}`]: time })
+        setCurrentUserScore({ [username]: time })
+        setShowHighScores(true)
+      } catch (err) {
+        console.log(err)
+      }
+    } else {
+      alert('That username is already taken.\nPlease try again.')
     }
   }
   return (

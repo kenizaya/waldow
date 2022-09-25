@@ -32,6 +32,7 @@ const HighScoreModal = ({ id, scores }) => {
             setShowForm={setShowForm}
             time={time}
             id={id}
+            scores={scores}
           />
         )}
         {showHighScores && (
