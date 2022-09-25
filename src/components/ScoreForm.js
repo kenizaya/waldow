@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
-// import { scores } from '../data/scores'
 import { db } from '../firebase'
 import styles from '../styles/ScoreForm.module.css'
 
-const ScoreForm = ({ setShowHighScores, setShowForm, time, id }) => {
+const ScoreForm = ({
+  setCurrentUserScore,
+  setShowHighScores,
+  setShowForm,
+  time,
+  id,
+}) => {
   const [username, setUsername] = useState('')
 
   const handleSubmit = async (e) => {
@@ -14,6 +19,7 @@ const ScoreForm = ({ setShowHighScores, setShowForm, time, id }) => {
         .collection('levels')
         .doc(id)
         .update({ [`scores.${username}`]: time })
+      setCurrentUserScore({ [username]: time })
       setShowHighScores(true)
     } catch (err) {
       console.log(err)

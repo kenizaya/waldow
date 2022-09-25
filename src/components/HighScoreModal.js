@@ -2,20 +2,22 @@ import React, { useEffect, useState } from 'react'
 import styles from '../styles/HighScoreModal.module.css'
 import { useNavigate } from 'react-router-dom'
 import HighScoreList from './HighScoreList'
-import { scores } from '../data/scores'
 import { sortHighScore } from '../util/sortHighScore'
 import ScoreForm from './ScoreForm'
 import { time, formatDuration } from './Timer'
 
-const HighScoreModal = ({ id }) => {
+const HighScoreModal = ({ id, scores }) => {
   const [showForm, setShowForm] = useState(false)
   const [showHighScores, setShowHighScores] = useState(false)
+  const [currentUserScore, setCurrentUserScore] = useState({})
   const highScores = sortHighScore(scores)
 
   useEffect(() => {
     if (time < highScores[highScores.length - 1][1] || highScores.length < 10)
       setShowForm(true)
   }, [])
+
+  console.log(currentUserScore)
 
   const navigate = useNavigate()
   return (
@@ -24,12 +26,15 @@ const HighScoreModal = ({ id }) => {
         {showForm && (
           <ScoreForm
             setShowHighScores={setShowHighScores}
+            setCurrentUserScore={setCurrentUserScore}
             setShowForm={setShowForm}
             time={time}
             id={id}
           />
         )}
-        {showHighScores && <HighScoreList />}
+        {showHighScores && (
+          <HighScoreList scores={{ ...scores, ...currentUserScore }} />
+        )}
 
         <div className={styles['right-container']}>
           <span>Your Time</span>
