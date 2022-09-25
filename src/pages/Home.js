@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid'
 import { db } from '../firebase'
 import { Link } from 'react-router-dom'
 import styles from '../styles/Home.module.css'
-import { levels } from '../data/levels'
+import Footer from '../components/Footer'
 
 const Home = () => {
   const [levels, setLevels] = useState({})
@@ -37,7 +37,8 @@ const Home = () => {
       <header className={styles.header}>
         <h1>waldow</h1>
       </header>
-      {error & <p className={styles.error}>{error}</p>}
+      {isPending && <h2>Loading...</h2>}
+      {error && <p className={styles.error}>{error}</p>}
       <p className={styles.p}>Find the characters as fast as possible</p>
       <div className={styles.container}>
         {Object.keys(levels).map((level) => {
@@ -61,6 +62,7 @@ const Home = () => {
           )
         })}
       </div>
+      <Footer />
     </>
   )
 }
